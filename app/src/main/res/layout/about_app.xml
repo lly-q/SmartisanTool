@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/setting_bg"
+    tools:context=".AboutApp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Con2"
+        android:layout_width="420dp"
+        android:layout_height="220dp"
+        android:background="@drawable/shape"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/guideline8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/updater"
+            app:layout_constraintBottom_toTopOf="@+id/guideline11"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.57" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Smartisan Tools"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline11"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Thank icon sources from Smartisan Tech™"
+            android:textSize="10dp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"></TextView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="242dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="特别鸣谢"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/Con3"
+        app:layout_constraintLeft_toLeftOf="@id/guideline12"
+        tools:ignore="MissingConstraints"></TextView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Con3"
+        android:layout_width="420dp"
+        android:layout_height="500dp"
+        android:background="@drawable/shape"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Con2"
+        tools:ignore="MissingConstraints">
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05" />
+        <TextView
+            android:id="@+id/blurdialog"
+            app:layout_constraintLeft_toLeftOf="@id/guideline13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blurdialog"
+            android:textSize="40dp">
+        </TextView>
+        <TextView
+            android:id="@+id/author1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/guideline13"
+            app:layout_constraintTop_toBottomOf="@id/blurdialog"
+            android:text="Author: byvlstr"
+            android:textSize="15dp"></TextView>
+    <TextView
+        android:id="@+id/version1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Version:1.0.0"
+        android:layout_marginStart="12dp"
+        app:layout_constraintStart_toEndOf="@id/author1"
+        app:layout_constraintTop_toBottomOf="@id/blurdialog"
+        android:textSize="15dp"></TextView>
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/version1"
+        android:layout_marginTop="12dp"
+        android:id="@+id/CircleImageView"
+        android:layout_width="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/guideline13"
+        android:text="CircleImageView"
+        android:layout_height="wrap_content"
+        android:textSize="40dp"></TextView>
+    <TextView
+        android:id="@+id/author2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/CircleImageView"
+        android:text="Author: hdodenhof"
+        app:layout_constraintLeft_toLeftOf="@id/guideline13"
+        android:textSize="15dp"></TextView>
+    <TextView
+        android:id="@+id/version2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:textSize="15dp"
+        app:layout_constraintLeft_toRightOf="@id/author2"
+        app:layout_constraintTop_toBottomOf="@id/CircleImageView"
+        android:text="Version: 3.1.0"></TextView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
