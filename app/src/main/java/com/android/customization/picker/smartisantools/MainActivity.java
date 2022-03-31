@@ -2,16 +2,16 @@ package com.android.customization.picker.smartisantools;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
-
 import android.app.ActionBar;
 import android.app.AlertDialog;
+
 import android.content.ComponentName;
 
 import android.content.Intent;
 import android.graphics.Rect;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Build;
 
 import android.view.KeyEvent;
 import android.view.Menu;
@@ -115,9 +115,15 @@ public class MainActivity extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ComponentName componetName = new ComponentName(
-                        "com.goodix.fingerprint.setting",  //这个是另外一个应用程序的包名
-                        "com.goodix.fingerprint.setting.MainActivity");   //这个参数是要启动的Activity的全路径名
+	    	if(Build.VERSION.SDK_INT <= Build.VERSION_CODES.Q){
+                	ComponentName componetName = new ComponentName(
+                        	"com.goodix.fingerprint.setting",  //这个是另外一个应用程序的包名
+                        	"com.goodix.fingerprint.setting.MainActivity");   //这个参数是要启动的Activity的全路径
+		}else{
+			ComponentName componetName = new ComponentName(
+                                "com.goodix.fingerprint.producttest",  //对R2进行适配
+                                "com.goodix.fingerprint.producttest.ProductionTestActivity"); 
+		}
 
                 try {
                     Intent intent = new Intent();
